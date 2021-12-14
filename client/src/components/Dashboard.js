@@ -21,7 +21,7 @@ function Dashboard({setAuth}) {
        <Switch>
          <div>
             <Route exact path="/dashboard" render={props =><WelcomePage {...props}/>}/>
-            <Route exact path="/progress" render={props =><Progress {...props}/>} />
+            <Route exact path={["/progress", "/update/:id"]} render={props =><Progress {...props}/>} />
             <Route exact path="/workout" render={props =><Workout {...props}/>} />
             <Route exact path="/contact" render={props =><Contact {...props}/>} />
           </div>
