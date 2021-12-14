@@ -1,6 +1,6 @@
 import React ,{useState,useEffect}from 'react'
 import TrackerItem from './TrackerItem'
-import {useHistory,useParams} from "react-router-dom"
+import {useParams,useHistory} from "react-router-dom"
 
 function Progress() {
   const [exercise, setExercise]= useState("")
@@ -10,8 +10,9 @@ function Progress() {
   const [date,setDate]=useState("")
   const [item,setItem]=useState([]);
   
-  const history=useHistory();
+  
   const {id}=useParams()
+  const history=useHistory();
 
 
   const handleSubmit= async (e) => {
@@ -53,7 +54,32 @@ function Progress() {
     
   }
 
-  const updateUserDetails= () => {
+  const updateUserDetails= async (id) => {
+    try {
+      const body= {exercise,date,weight,duration,repetition}
+
+      const myHeaders = new Headers();
+
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("token", localStorage.token);
+
+      await fetch(`http://localhost:4000/dashboard/tracker/${id}`, {
+        method: "PUT",
+        headers: myHeaders,
+        body: JSON.stringify(body)
+      });
+      setWeight("")
+      setDuration("")
+      setExercise("")
+      setRepition("")
+      setDate("")
+      setTimeout (()=>history.push("/progress"),1000);
+     
+    } catch (err) {
+      console.error(err.message);
+    }
+
+    
     
   }
 
