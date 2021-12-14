@@ -1,5 +1,6 @@
 import React ,{useState,useEffect}from 'react'
 import TrackerItem from './TrackerItem'
+import {useHistory,useParams} from "react-router-dom"
 
 function Progress() {
   const [exercise, setExercise]= useState("")
@@ -9,42 +10,51 @@ function Progress() {
   const [date,setDate]=useState("")
   const [item,setItem]=useState([]);
   
-
+  const history=useHistory();
+  const {id}=useParams()
 
 
   const handleSubmit= async (e) => {
     e.preventDefault()
-    try{
-      const myHeaders = new Headers();
-
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("token", localStorage.token);
-
-      const body= {exercise,date,weight,duration,repetition}
-
-      const response = await fetch("http://localhost:4000/dashboard/tracker", {
-        method: "POST",
-        headers: myHeaders,
-        body: JSON.stringify(body)
-        
-      });
-
-      
-      const parseResponse = await response.json();
-      console.log(parseResponse);
-
-    setItem([...item, parseResponse])
-    setWeight("")
-    setDuration("")
-    setExercise("")
-    setRepition("")
-    setDate("")
-
+    if( !id){
     
-    }catch (err){
-      console.error(err.message);
+        const myHeaders = new Headers();
+  
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("token", localStorage.token);
+  
+        const body= {exercise,date,weight,duration,repetition}
+  
+        const response = await fetch("http://localhost:4000/dashboard/tracker", {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify(body)
+          
+        });
+  
+        
+        const parseResponse = await response.json();
+        console.log(parseResponse);
+  
+      setItem([...item, parseResponse])
+      setWeight("")
+      setDuration("")
+      setExercise("")
+      setRepition("")
+      setDate("")
+  
+      
+       
+  
+    } else {
+      updateUserDetails(id)
     }
+   
+    
+  }
 
+  const updateUserDetails= () => {
+    
   }
 
   const getProfile = async () => {
@@ -89,7 +99,7 @@ function Progress() {
          <input required type="date" value={date} name="date"  onChange={e => setDate(e.target.value)}></input>
          
          <br/>
-         <button className="add-btn">ADD</button> 
+         <input type="submit" value={id ? "UPDATE": "ADD"}></input> 
        </form>
        <TrackerItem item={item} setItem={setItem} ></TrackerItem>
     </div>
