@@ -149,3 +149,168 @@
 .btn-view {
   background-color:#9ed9db ;
 }
+
+
+/* Spinner */
+.loader1 {
+  display:inline-block;
+  font-size:30px;
+  padding:10px;
+}
+.loader1 span {
+  vertical-align:middle;
+  border-radius:100%;
+  
+  display:inline-block;
+  width:10px;
+  height:10px;
+  margin:3px 2px;
+  -webkit-animation:loader1 0.8s linear infinite alternate;
+  animation:loader1 0.8s linear infinite alternate;
+}
+.loader1 span:nth-child(1) {
+  -webkit-animation-delay:-1s;
+  animation-delay:-1s;
+ background:#5879a8;
+}
+.loader1 span:nth-child(2) {
+  -webkit-animation-delay:-0.8s;
+  animation-delay:-0.8s;
+  background:#5879a8;
+}
+.loader1 span:nth-child(3) {
+  -webkit-animation-delay:-0.26666s;
+  animation-delay:-0.26666s;
+  background:#5879a8;
+}
+.loader1 span:nth-child(4) {
+  -webkit-animation-delay:-0.8s;
+  animation-delay:-0.8s;
+  background:#5879a8;
+ 
+}
+.loader1 span:nth-child(5) {
+  -webkit-animation-delay:-1s;
+  animation-delay:-1s;
+  background:#5879a8;
+}
+
+@keyframes loader1 {
+  from {transform: scale(0, 0);}
+  to {transform: scale(1, 1);}
+}
+@-webkit-keyframes loader1 {
+  from {-webkit-transform: scale(0, 0);}
+  to {-webkit-transform: scale(1, 1);}
+}
+
+/* WORKOUT */
+
+.workout-search {
+  width: 230px;
+  height: 35px;
+  border-radius: 5px;
+  margin: 0px 30px;
+}
+
+select {
+  max-width: 150px;
+  border-radius: 5px;
+  height: 90%;
+  margin-left: 10px;
+
+}
+
+.button-search {
+  width: 100px;
+  height: 35px;
+  background: #B00B69;
+  color: #fff;
+  border: none;
+ 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  background-color: #99CCCC;
+}
+
+
+
+ .workout-container { 
+
+  max-width: 400px;
+  min-height: 300px;
+  box-shadow: 0px 1px 5px 3px black;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 40px 60px;
+  display: inline-block;
+  text-align:center; 
+} 
+
+.workout-container:hover {
+
+  transform: scale(1.07);
+}
+
+.gif {
+  margin-right:10px;
+  width: 150px;
+  
+  
+ 
+} 
+
+ .workout-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width:160px;
+  height:70px;
+  
+ 
+} 
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left:30px;
+  
+}
+
+
+.countdown-container {
+display: flex;
+align-self: center;
+align-content: center;
+justify-content: flex-end;
+margin-right:50px;
+
+}
+
+.title-workout {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ef6461;
+}
+
+.countdown-btn {
+  width: 100px;
+  height: 35px;
+  margin: 0px 10px;
+  background: #B00B69;
+  color: #fff;
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.seconds-title {
+  font-size: 30px;
+}
+
+.countdown-btn:hover {
+  background-color: #99CCCC;
+}

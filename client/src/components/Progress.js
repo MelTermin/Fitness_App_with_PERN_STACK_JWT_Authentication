@@ -2,6 +2,8 @@ import React ,{useState,useEffect}from 'react'
 import TrackerItem from './TrackerItem'
 import {useParams,useHistory} from "react-router-dom"
 
+
+
 function Progress() {
   const [exercise, setExercise]= useState("")
   const [repetition,setRepition]=useState("")
@@ -128,6 +130,7 @@ function Progress() {
          <input type="submit" value={id ? "UPDATE": "ADD"}></input> 
        </form>
        <TrackerItem item={item} setItem={setItem} ></TrackerItem>
+       
     </div>
   )
 }
