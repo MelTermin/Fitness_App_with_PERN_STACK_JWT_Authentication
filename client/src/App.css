@@ -4,6 +4,52 @@
   box-sizing: border-box;
 }
 
+.landing-container {
+  border:2px solid #2c3e50;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color:#2c3e50;
+  color: white;
+}
+
+.landing-text {
+  margin:400px auto;
+}
+
+.text-ref {
+  color: #2ecc71;
+  font-size: 20px;
+}
+
+.links {
+ 
+ display:flex;
+ flex-direction: row;
+ justify-content: center;
+
+  
+}
+.login-btn {
+  margin: 30px;
+  width: 200px;
+  height: 40px;
+  background-color: #e74c3c;
+  padding: 6px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  
+  line-height: 25px;
+  text-decoration: none;
+  
+}
+
+.login-container {
+  border: 2px solid green;
+  width: 100%;
+  height: 100vh;
+}
 /* Navbar */
 .navbar {
   background-color: #191d2b; 
@@ -115,7 +161,7 @@
     .btn-add {
       width: 7%;
       padding: 0.5rem 1rem;
-      background-color: crimson;
+      background-color: #2ecc71;
       color: #fff;
       font-size: 1rem;
       border: none;
@@ -139,7 +185,7 @@
 
 .styled-table thead tr {
   
-  background-color: crimson;
+  background-color: #2ecc71;
   color:white;
   text-align: center;
 
@@ -172,11 +218,11 @@
 }
 
 .btn-edit {
-  background-color: yellowgreen;
+  background-color: #e74c3c;
 }
 
 .btn-delete {
-  background-color: tomato;
+  background-color: 	#545aa7;
 }
 
 
