@@ -87,11 +87,42 @@
 
 .progress-container {
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 80px;
   height: 100vh;
-  border:2px solid green;
+
 }
+
+.workout-details-form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 40%;
+
+}
+
+.workout-details-form input {
+  width: 500px;
+  height: 30px;
+  
+  }
+
+  .workout-details-form label {
+   margin:20px 0px;
+    
+    }
+
+    .btn-add {
+      width: 7%;
+      padding: 0.5rem 1rem;
+      background-color: crimson;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
 /* Table */
 .styled-table {
@@ -99,17 +130,19 @@
   margin: auto;
   font-size: 16px;
   font-family: sans-serif;
-  max-width: 900px;
+  max-width: 700px;
   box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  margin: 60px 100px;
  
   
 }
 
 .styled-table thead tr {
   
-  background-color: #327f87;
+  background-color: crimson;
   color:white;
   text-align: center;
+
 }
 
 .styled-table th, .styled-table td {
@@ -146,9 +179,7 @@
   background-color: tomato;
 }
 
-.btn-view {
-  background-color:#9ed9db ;
-}
+
 
 
 /* Spinner */

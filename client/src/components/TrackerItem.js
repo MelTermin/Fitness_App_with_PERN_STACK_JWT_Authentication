@@ -29,6 +29,7 @@ function TrackerItem({item,setItem}) {
             <th style= {{textAlign:"center"}}>Date</th>
             <th style= {{textAlign:"center"}}>Weight</th>
             <th style= {{textAlign:"center"}}>Repetition</th>
+            <th style= {{textAlign:"center"}}>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -40,7 +41,7 @@ function TrackerItem({item,setItem}) {
                 <td>{details.exercise}</td>
                 <td>{details.duration}</td>
                 <td>{new Date (details.date).toLocaleDateString("en-US")}</td>
-                <td>{details.weight}</td>
+                <td>{details.weight} kg</td>
                 <td>{details.repetition}</td>
                 <td>
                   <Link to= {`/update/${details.tracker_form_id}`}>

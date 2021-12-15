@@ -127,7 +127,7 @@ function Progress() {
          <input required type="date" value={date} name="date"  onChange={e => setDate(e.target.value)}></input>
          
          <br/>
-         <input type="submit" value={id ? "UPDATE": "ADD"}></input> 
+         <input className="btn-add" type="submit" value={id ? "UPDATE": "ADD"}></input> 
        </form>
        <TrackerItem item={item} setItem={setItem} ></TrackerItem>
        
