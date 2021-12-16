@@ -45,6 +45,7 @@ function Register({ setAuth }) {
   };
   
   return (
+    <div style={{backgroundColor:"#34495e", height:"100vh", display:"flex"}}>
     <div className="register-wrapper">
       <h1 style={{textAlign:"center",marginTop:"20px"}}>Register</h1>
       <form  onSubmit={onSubmitForm}>
@@ -75,13 +76,16 @@ function Register({ setAuth }) {
           onChange={e => onChange(e)}
           
         />
-       
-        <button className="btn btn-success btn-block">Submit</button>
-      </form>
-      <div className="register-container" style={{marginTop:"20px"}}>
-        <p>Already registered ?</p>
-        <Link to="/login">Login</Link>
+       <br/>
+       <br/>
+        <button className="btn-register">Submit</button>
+        <div className="register-container" style={{marginTop:"20px"}}>
+          <p>Already registered ?</p>
+          <Link style={{textDecoration:"none", color:"black"}} to="/login">Login</Link>
       </div>
+      </form>
+      
+    </div>
     </div>
   )
 }

@@ -48,7 +48,7 @@ function Navbar({setAuth}) {
                 className="nav-links"
                
               >
-                Progress Chart
+                Progress Details
               </Link>
             </li>
            

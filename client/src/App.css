@@ -115,15 +115,20 @@ padding: 25px 40px;
 .register-wrapper {
   display:flex;
   flex-direction: column;
-  border: 2px solid slateblue;
+  
+  border-radius: 10px;
   width: 600px;
-  height: 400px;
-  margin: 200px 400px;
+  height: 500px;
+  margin: 200px 420px;
+  background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
 .register-wrapper form {
+  padding: 20px 100px;
   display:flex;
   flex-direction: column;
+  
 }
 
 .register-wrapper label {
@@ -134,6 +139,19 @@ padding: 25px 40px;
   width: 100%;
   height: 30px;
   
+}
+
+.btn-register {
+  width: 30%;
+  
+  padding: 0.5rem 1rem;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 
@@ -214,6 +232,38 @@ padding: 25px 40px;
 .nav-item .active {
   color: crimson;
   border: 1px solid crimson;
+}
+/* Welcome page */
+.home-container-titles {
+
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container-titles::before {
+  content: "";
+  background-image: url("./image/pic6.jpeg");
+  opacity: 0.60;
+  background-size: cover;
+  position: absolute;
+  top: 78px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.welcome-page-title{
+
+  font-size: 32px;
+}
+
+.link-home{
+  
+  color: #191d2b;
 }
 
 /* Progress-container */
@@ -477,4 +527,56 @@ margin-right:50px;
 
 .countdown-btn:hover {
   background-color: #99CCCC;
+}
+
+/* Contact container */
+
+.contact-container {
+  display:flex;
+  margin-top: 80px;
+  height: 100vh;
+}
+
+.headline {
+  display:flex;
+  align-items: center;
+  
+}
+
+.contact-container form {
+
+  display:flex;
+  width: 100%;
+  padding: 100px 30px;
+  flex-direction: column;
+}
+
+.contact-container input {
+  width:100%;
+  height: 30px;
+  
+}
+
+.social-media-contact {
+
+  width: 300px;
+  display:flex;
+  justify-content:space-between;
+  margin-left: 1060px;
+ 
+}
+.contact-container textarea {
+  height: 100px;
+}
+.contact-btn {
+  width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #2ecc71;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+  border-radius: 5px;
 }
