@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+
 
 
 function Register({ setAuth }) {
@@ -45,35 +45,43 @@ function Register({ setAuth }) {
   };
   
   return (
-    <div>
-      <form onSubmit={onSubmitForm}>
+    <div className="register-wrapper">
+      <h1 style={{textAlign:"center",marginTop:"20px"}}>Register</h1>
+      <form  onSubmit={onSubmitForm}>
+        <label>Email:</label>
         <input
           type="text"
           name="email"
           value={email}
-          placeholder="email"
+          placeholder="Please type your email"
           onChange={e => onChange(e)}
           
         />
+        <label>Name:</label>
+         <input
+          type="text"
+          name="name"
+          value={name}
+          placeholder="Please type your name"
+          onChange={e => onChange(e)}
+         
+        />
+        <label>Password:</label>
         <input
           type="password"
           name="password"
           value={password}
-          placeholder="password"
+          placeholder="Please type your password"
           onChange={e => onChange(e)}
           
         />
-        <input
-          type="text"
-          name="name"
-          value={name}
-          placeholder="name"
-          onChange={e => onChange(e)}
-         
-        />
+       
         <button className="btn btn-success btn-block">Submit</button>
       </form>
-      <Link to="/login">Login</Link>
+      <div className="register-container" style={{marginTop:"20px"}}>
+        <p>Already registered ?</p>
+        <Link to="/login">Login</Link>
+      </div>
     </div>
   )
 }

@@ -1,12 +1,15 @@
 import React,{useState} from 'react'
-import { toast } from "react-toastify";
 import { Link} from "react-router-dom";
+import { FaFacebook,FaYoutube } from 'react-icons/fa';
+import {SiInstagram} from 'react-icons/si';
 
 function Login({setAuth}) {
   const [inputs, setInputs] = useState({
     email: "",
     password: ""
   });
+
+  
 
   const { email, password } = inputs;
 
@@ -41,15 +44,46 @@ function Login({setAuth}) {
 
   return (
     <div className="login-container">
-      <h1>Login</h1>
-      <form onSubmit={onSubmitForm}>
-        <input type="email" name="email" placeholder="email" value={email}
-          onChange={e => onChange(e)}></input>
-        <input type="password" name="password" placeholder="password" value={password}
-          onChange={e => onChange(e)}></input>
-        <button>Submit</button>
-      </form>
-      <Link to="/register">Register</Link>
+      <div className="picture">
+
+      </div>
+      <div className="form-container">
+          <h1 style={{textAlign:"center"}}>Login</h1>
+          <br/>
+          <br/>
+          <form onSubmit={onSubmitForm}>
+            <label>Email:</label>
+            <br/>
+            <br/>
+            <input type="email" name="email" placeholder="email" value={email}
+              onChange={e => onChange(e)}></input>
+            <br/>
+            <br/>
+            <label>Password:</label>
+            <br/>
+            <br/>
+            
+            <input type="password" name="password" placeholder="password" value={password}
+              onChange={e => onChange(e)}></input>
+              <br/>
+              <br/>
+            <button className="btn">Submit</button>
+            <br/>
+            <br/>
+          </form>
+          <div className="register-container">
+            <p>Do not have an account yet ?</p>
+            <Link style={{textDecoration:"none", color:"black"}} to="/register">Register</Link>
+          </div>
+
+          <div className="social-media">
+              <FaFacebook size={32}></FaFacebook>
+              <SiInstagram size={32}></SiInstagram>
+              <FaYoutube size={32}></FaYoutube>
+          </div>
+       
+      
+      </div>
       
     </div>
   )

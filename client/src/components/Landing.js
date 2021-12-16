@@ -18,7 +18,7 @@ function Landing() {
       <div className="landing-text">
           <h1>Welcome to Your Fitness App</h1>
           <br></br>
-          <h2 className="text-ref" ref= {textRef}></h2>
+          <h2 className="text-ref"><span ref= {textRef}></span></h2>
           <div className="links">
               <Link to="/login" className="login-btn">
                 Login
