@@ -55,7 +55,7 @@ function Login({setAuth}) {
             <label>Email:</label>
             <br/>
             <br/>
-            <input type="email" name="email" placeholder="email" value={email}
+            <input type="email" name="email" placeholder="Please type your email address" value={email}
               onChange={e => onChange(e)}></input>
             <br/>
             <br/>
@@ -63,7 +63,7 @@ function Login({setAuth}) {
             <br/>
             <br/>
             
-            <input type="password" name="password" placeholder="password" value={password}
+            <input type="password" name="password" placeholder="Please type your password" value={password}
               onChange={e => onChange(e)}></input>
               <br/>
               <br/>
