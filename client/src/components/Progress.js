@@ -1,7 +1,9 @@
 import React ,{useState,useEffect}from 'react'
 import TrackerItem from './TrackerItem'
 import {useParams,useHistory} from "react-router-dom"
-
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+toast.configure();
 
 
 function Progress() {
@@ -70,6 +72,7 @@ function Progress() {
         headers: myHeaders,
         body: JSON.stringify(body)
       });
+      toast.success("Updated Successfully");
       setWeight("")
       setDuration("")
       setExercise("")

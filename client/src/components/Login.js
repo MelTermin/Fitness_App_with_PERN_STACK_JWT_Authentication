@@ -2,6 +2,9 @@ import React,{useState} from 'react'
 import { Link} from "react-router-dom";
 import { FaFacebook,FaYoutube } from 'react-icons/fa';
 import {SiInstagram} from 'react-icons/si';
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+toast.configure();
 
 function Login({setAuth}) {
   const [inputs, setInputs] = useState({
@@ -35,6 +38,7 @@ function Login({setAuth}) {
   
       
           localStorage.setItem("token", parseRes.jwtToken);
+          toast.success("Logged in Successfully");
           setAuth(true);
          
       } catch (err) {
