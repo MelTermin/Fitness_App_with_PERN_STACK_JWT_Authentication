@@ -168,9 +168,6 @@ padding: 25px 40px;
   top: 0;
   z-index: 20;
   width:100%;
-
-
-  
 }
 
 .nav-container {
@@ -232,6 +229,15 @@ padding: 25px 40px;
 .nav-item .active {
   color: crimson;
   border: 1px solid crimson;
+}
+
+.nav-item .active {
+  color: crimson;
+  border: 1px solid crimson;
+}
+
+.nav-icon {
+  display: none;
 }
 /* Welcome page */
 .home-container-titles {
@@ -579,4 +585,338 @@ margin-right:50px;
 	cursor: pointer;
 	transition: .3s;
   border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1024px)  {
+
+  .login-container {
+    margin: 200px 100px;
+  }
+
+  .register-wrapper {
+    margin: 200px 250px;
+  }
+
+
+
+  .welcome-page-title{
+
+    font-size: 20px;
+  }
+
+  
+  .workout-details-form input {
+    width: 300px;
+    height: 30px;
+    
+  }
+
+  .form-title {
+    font-size: 25px;
+  }
+  
+  /* Table */
+  .styled-table {
+    font-size: 15px;
+    max-width: 600px;
+    margin: 60px 30px;  
+  }
+
+  .btn {
+    font-size: 13px;
+   
+  }
+  .workout-container { 
+
+    margin: 40px 55px;
+    
+  } 
+
+  .social-media-contact {
+
+  
+    margin-left: 650px;
+   
+  }
+ 
+
+}
+
+@media screen and (max-width: 768px)  {
+  .login-container {
+
+    display:flex;
+    flex-direction: column;
+    max-width: 700px;
+    height: 700px;
+    margin: 50px 100px;
+    
+  }
+
+  .picture {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    }
+    .form-container {
+    width: 100%;
+    height: 100%;
+    flex-direction:column;
+    padding: 25px 40px;
+    }
+
+    .register-wrapper {
+      margin: 100px 100px;
+    }
+
+    .navbar {
+     
+      font-size: 15px;
+    
+    }
+
+    .progress-container {
+      display:flex;
+      flex-direction: column;
+    }
+
+    .workout-details-form {
+      display: flex;
+      flex-direction: column;
+      padding-left: 70px;
+      width: 100%;
+    
+    }
+    
+    .workout-details-form input {
+      width: 500px;
+      height: 30px;
+      
+      }
+
+      .nav-logo {
+ 
+        padding-left:70px;
+
+      }
+
+      .styled-table {
+        font-size: 15px;
+        max-width: 700px;
+        margin: 60px 70px;  
+      }
+
+      .search-container {
+     
+        display: flex;
+        justify-content: space-between;
+    
+        
+      }
+
+      .workout-search {
+        width: 190px;
+        height: 35px;
+        border-radius: 5px;
+        margin: 0px 10px;
+      }
+      
+      select {
+        max-width: 150px;
+        border-radius: 5px;
+        height: 90%;
+        margin-left: 5px;
+      
+      }
+      
+      .button-search {
+        width: 60px;
+     
+      }
+
+      .countdown-btn {
+        width: 60px;
+   
+      }
+      
+      .workout-container { 
+        margin: 40px 80px;
+      } 
+
+      .social-media-contact {
+        margin-left: 400px;
+
+      }
+}
+
+@media screen and (max-width: 375px)  {
+  .login-container {
+    width: 400px;
+    height: 700px;
+    margin: 20px 0px;
+    
+  }
+
+  .register-wrapper {
+    margin: 60px 0px;
+  }
+
+  .register-wrapper form {
+    padding: 20px 50px;
+  
+    
+  }
+
+  .social-media-contact {
+    margin-left: 10px;
+
+  }
+
+  .search-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 150px;
+
+    
+  }
+
+  .workout-search {
+    width: 140px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0px 10px;
+  }
+  
+  select {
+    max-width: 150px;
+    border-radius: 5px;
+    height: 90%;
+    margin-left: 5px;
+  
+  }
+  
+  .button-search {
+    width: 80px;
+ 
+  }
+
+  .countdown-btn {
+    width: 60px;
+
+  }
+  
+  .workout-container { 
+    margin: 40px 80px;
+  } 
+
+  .workout-details-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    width: 100%;
+  
+  }
+
+  .workout-details-form input {
+    width: 300px;
+    height: 30px;
+    
+    }
+    .styled-table {
+     
+      font-size: 15px;
+      width: 300px;
+      
+      margin: 60px 0px;  
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+  .login-container {
+    max-width: 400px;
+    height: 700px;
+    margin: 0px 0px;
+    
+  }
+
+  .register-wrapper {
+    margin: 40px 0px;
+  }
+
+  .register-wrapper form {
+    padding: 20px 20px;
+  
+  }
+
+  .search-container {
+ 
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 150px;
+
+    
+  }
+
+  .workout-search {
+    width: 170px;
+    height: 35px;
+    border-radius: 5px;
+    margin: 0px 10px;
+  }
+
+  .social-media-contact {
+    margin-left: 15px;
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    
+  }
+
+  .nav-menu.active {
+    background-color:#191d2b;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    color: white;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: crimson;
+  }
 }

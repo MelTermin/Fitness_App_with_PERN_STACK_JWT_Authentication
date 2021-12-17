@@ -1,8 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
+import { FaTimes,FaBars } from 'react-icons/fa';
 
 function Navbar({setAuth}) {
   const [name, setName] = useState("");
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click)
 
   const getProfile = async () => {
     try {
@@ -39,7 +42,7 @@ function Navbar({setAuth}) {
           <Link exact to="/dashboard" className="nav-logo">
           Welcome, {name}</Link>
 
-          <ul className="nav-menu">
+          <ul  className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link
                 exact
@@ -87,7 +90,9 @@ function Navbar({setAuth}) {
               </Link>
             </li>
           </ul>
-          
+          <div className="nav-icon" onClick={handleClick}>
+            {click ? <FaTimes /> :<FaBars />}
+          </div>
          
         </div>
         

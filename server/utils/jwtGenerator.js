@@ -4,7 +4,7 @@ env.config();
 
 
 function jwtGenerator(user_id) {
-  const payload= {
+  let payload= {
     user:{
       id:user_id
     }

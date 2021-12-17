@@ -10,7 +10,7 @@ function WelcomePage() {
           <div className="welcome-page-title" >
             <div><h2>PERN Stack Fitness App with JWT Authentication</h2></div>
             <br></br>
-            <div style={{textAlign:"center"}}>Welcome to the Weight Tracker and Fitness Workout sample project!</div>
+            <div >Welcome to the Weight Tracker and Fitness Workout sample project!</div>
             <br></br>
             <br></br>
             <div>Add a <Link className="link-home"  to="/progress" >

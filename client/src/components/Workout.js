@@ -111,7 +111,7 @@ console.log(workoutDetails)
         
           </select>
       
-          <input className="workout-search" type="text" placeholder="Please search for exercise type..." value= {searchWorkOut} onChange= {(e)=>setSearchWorkOut(e.target.value)}></input>
+          <input className="workout-search" type="text" placeholder="Please search for exercise type" value= {searchWorkOut} onChange= {(e)=>setSearchWorkOut(e.target.value)}></input>
          
           <button className="button-search" onClick= {handleWorkOut}>Search</button>
 

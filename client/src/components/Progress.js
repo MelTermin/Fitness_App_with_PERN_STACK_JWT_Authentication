@@ -112,7 +112,7 @@ function Progress() {
     <div  className="progress-container" >
        <form className="workout-details-form" onSubmit= {handleSubmit}   >
         
-       <h1>Workout Detail Form</h1>
+       <h1 className="form-title">Workout Detail Form</h1>
          
          <label>Name of exercise:</label>
          <input required type="text" value= {exercise}  name="exercise" onChange={e => setExercise(e.target.value)} placeholder="Please type a exercise " ></input>
