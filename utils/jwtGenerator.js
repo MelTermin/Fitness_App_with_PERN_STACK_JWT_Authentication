@@ -4,10 +4,8 @@ env.config();
 
 
 function jwtGenerator(user_id) {
-  let payload= {
-    user:{
-      id:user_id
-    }
+  const payload= {
+   user:user_id
   }
   return jwt.sign(payload,process.env.jwtSecret, {expiresIn:"1hr"})
 }
