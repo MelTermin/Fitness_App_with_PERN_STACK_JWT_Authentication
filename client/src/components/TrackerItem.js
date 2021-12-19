@@ -8,7 +8,7 @@ function TrackerItem({item,setItem}) {
 
   const onDeleteUser= async (id) => {
     try {
-       await fetch(`http://localhost:4000/dashboard/tracker/${id}`, {
+       await fetch(`https://fitnessappmelissa.herokuapp.com/dashboard/tracker/${id}`, {
         method: "DELETE",
         headers: { token: localStorage.token }
       });

@@ -90,7 +90,7 @@ function Progress() {
 
   const getProfile = async () => {
     try {
-      const res = await fetch("http://localhost:4000/dashboard/", {
+      const res = await fetch("https://fitnessappmelissa.herokuapp.com/dashboard/", {
         method: "GET",
         headers: { token: localStorage.token }
       });
