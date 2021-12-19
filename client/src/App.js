@@ -15,7 +15,7 @@ function App() {
   const checkAuthenticated= async () =>  {
     try {
 
-      const response= await fetch("http://localhost:4000/auth/verify", {
+      const response= await fetch("https://fitnessappmelissa.herokuapp.com/auth/verify", {
         method: "POST",
         headers: { token: localStorage.token }
       });
