@@ -30,7 +30,7 @@ function Progress() {
   
         const body= {exercise,date,weight,duration,repetition}
   
-        const response = await fetch("http://localhost:4000/dashboard/tracker", {
+        const response = await fetch("https://fitnessappmelissa.herokuapp.com/dashboard/tracker", {
           method: "POST",
           headers: myHeaders,
           body: JSON.stringify(body)
@@ -67,7 +67,7 @@ function Progress() {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append("token", localStorage.token);
 
-      await fetch(`http://localhost:4000/dashboard/tracker/${id}`, {
+      await fetch(`https://fitnessappmelissa.herokuapp.com/dashboard/tracker/${id}`, {
         method: "PUT",
         headers: myHeaders,
         body: JSON.stringify(body)
